@@ -1,6 +1,7 @@
 fib_list = [1,1]  # memoisation
+
 def fib_fun(n):
-    if n < len(fib_list):
+    if n < len(fib_list): # reading instead of re-calculating
         return fib_list[n]
     new_fib = fib_fun(n-1) + fib_fun(n-2)
     fib_list.append(new_fib)
