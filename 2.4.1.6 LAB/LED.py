@@ -14,8 +14,8 @@ for lin in range(5):
 ####################################
 ###### SECOND VERSION
 
-# for lin in range(5):
-#     for val in "1234567890":
+# for lin in range(5):                  ## LED display has 5 lines
+#     for val in "1234567890":          ## This is sample text, can ba any strnig of digits
 #         print(mat[int(val)][lin*3:lin*3+3], end=' ')
 #     print()
 
