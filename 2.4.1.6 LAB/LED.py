@@ -1,20 +1,28 @@
 # 13 LED dot martix emulation for digits 0-9
-# simpler version:
-
-# 13 LED dot martix emulation for digits 0-9
+# EVEN MORE simpler version:
 
 mat = ['#### ## ## ####', ' #  #  #  #  # ', '###  #####  ###',
 '###  ####  ####', '# ## ####  #  #', '####  ###  ####', '####  #### ####',
 '###  #  #  #  #', '#### ##### ####', '#### ####  ####']
 
-
+sample_text = "1234567890"   # works only for string of digits 0-9!
 for lin in range(5):
-    for val in "1234567890":
-        print(mat[int(val)][lin*3:lin*3+3], end=' ')
-    print()
+    print(*[mat[int(val)][lin*3:lin*3+3] for val in sample_text])
+
+    
+    
+####################################
+###### SECOND VERSION
+
+# for lin in range(5):
+#     for val in "1234567890":
+#         print(mat[int(val)][lin*3:lin*3+3], end=' ')
+#     print()
+
+
 
 ####################################
-###### OLD VERSION
+###### FIRST VERSION
 
 # dd = {}
 # dd["0"] = ['###','# #','# #','# #','###']
