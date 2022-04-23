@@ -13,8 +13,8 @@ class Fibo():
     self.f1, self.f2 = self.f2, self.f1 + self.f2
     self.n -= 1
     if self.n < 1:
-      raise StopIteration
-    return self.f1
+      raise StopIteration   ## to stop iteration MUST USE exception
+    return self.f1        ## return calculated value
   
   ## call Fib() in iteration:
   for i in Fibo(12):
