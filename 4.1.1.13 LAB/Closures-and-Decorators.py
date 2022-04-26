@@ -15,30 +15,38 @@ f1("Return this text")()  # EXTRA () NEEDED!
 
 
   
-#### Decorators - add extra options to existing function:
+#### Decorators - add extra options to external function:
 ## Declaration:
 
-def f1(exist_function):
+def decorator(f3_function):
 
-    def f2(exist_function_params):
+    def wrapper(f3_params):
         print("This is extra text added")
-	      ## NOW RUN EXIST FUNCTION INSIDE HERE
-	      return exist_function(exist_function_params)
+	      ## NOW RUN EXTERNAL FUNCTION INSIDE HERE
+	      return f3_function(f3_params)
 	
-    return f2           # NO PARENTASIS (). We dont call f2 here!!
+    return wrapper           # NO PARENTASIS (). We dont call f2 here!!
   
   
 ## Decorators Usage:
 
-@f1                      # Decorator initiation
-def some_function(x):
+@decorator                    # Decorator initiation
+def external_function(x):
     print(x)
   
-print("This is from function)
+external_function("This is from function")
 
 ## As the result there will be 2 lines:
 ## > This is extra text added
 ## > This is from function
+
+##  Short decorator use:
+
+def external_function(x):
+    print(x)
+
+decorator(external_function)("This is from function")  # REMEMBER TWO PAIR OF BRAKETS!!!
+
  
  
 
